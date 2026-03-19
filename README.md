@@ -13,7 +13,7 @@ This repository aims to document useful knowledge, share lessons learned, and pr
 ## 消息
 
 - 2026-03-19: 开源 [WestOdyssey](https://github.com/Haiming94/WestOdyssey) 项目。
-- 2026-03-14: 基于 OpenClaw 开发的 `WestOdyssey:一个面向科研攻关的智能协作系统` 项目在北京智源研究院组织的 `OpenClaw 虾客行` 活动中获得第一名！
+- 2026-03-14: 基于 OpenClaw 开发的 `WestOdyssey:一个面向科研攻关的智能协作系统` 项目在北京智源研究院组织的 `智源虾客行 OpenClaw落地实战派` 活动中获得第一名！
 
 ---
 
