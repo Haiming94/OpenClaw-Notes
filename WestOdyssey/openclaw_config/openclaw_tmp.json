@@ -1,0 +1,274 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.8",
+    "lastTouchedAt": "2026-03-13T11:53:10.231Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-13T11:44:34.061Z",
+    "lastRunVersion": "2026.3.8",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "custom-yun-com": {
+        "baseUrl": "http://kspmas.ksyun.com/v1",
+        "apiKey": "8407460c-9a3d-4a32-bb0d-43e91a74304f",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "mco-4",
+            "name": "mco-4 (Custom Provider)",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "custom-yun-com/mco-4"
+      },
+      "models": {
+        "custom-yun-com/mco-4": {}
+      },
+      "workspace": "/root/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "main"
+      },
+      {
+        "id": "wukong",
+        "name": "孙悟空",
+        "workspace": "/root/.openclaw/workspace-wukong",
+        "agentDir": "/root/.openclaw/agents/wukong/agent",
+        "identity": {
+          "name": "\u5b59\u609f\u7a7a",
+          "theme": "\u7b97\u6cd5\u5f00\u53d1\u4e0e\u7f16\u7a0b\u5b9e\u73b0\uff0c\u7f16\u5199\u8c03\u8bd5\u4ee3\u7801\u3001\u6784\u5efa\u5b9e\u9a8c pipeline\u3001\u8bad\u7ec3\u6a21\u578b"
+        }
+      },
+      {
+        "id": "sanzang",
+        "name": "唐僧",
+        "workspace": "/root/.openclaw/workspace-sanzang",
+        "agentDir": "/root/.openclaw/agents/sanzang/agent",
+        "identity": {
+          "name": "\u5510\u50e7",
+          "theme": "\u79d1\u7814\u6218\u7565\u4e0e\u65b9\u5411\u89c4\u5212\uff0c\u5b9a\u4e49\u7814\u7a76\u95ee\u9898\u3001\u5236\u5b9a\u8ba1\u5212\u3001\u8ffd\u8e2a\u524d\u6cbf\u3001\u534f\u8c03\u4f18\u5148\u7ea7"
+        },
+        "subagents": {
+          "allowAgents": ["wukong", "wuneng", "wujing", "horse"]
+        }
+      },
+      {
+        "id": "wuneng",
+        "name": "wuneng",
+        "workspace": "/root/.openclaw/workspace-wuneng",
+        "agentDir": "/root/.openclaw/agents/wuneng/agent",
+        "identity": {
+          "name": "\u732a\u516b\u6212",
+          "theme": "\u5b66\u672f\u5199\u4f5c\u4e0e\u9879\u76ee\u7533\u62a5\uff0c\u64b0\u5199\u8bba\u6587\u3001\u6da6\u8272\u8bed\u8a00\u3001\u64b0\u5199\u57fa\u91d1\u7533\u8bf7\u4e66"
+        }
+      },
+      {
+        "id": "wujing",
+        "name": "wujing",
+        "workspace": "/root/.openclaw/workspace-wujing",
+        "agentDir": "/root/.openclaw/agents/wujing/agent",
+        "identity": {
+          "name": "\u6c99\u50e7",
+          "theme": "\u6587\u732e\u7ba1\u7406\u4e0e\u77e5\u8bc6\u6574\u5408\uff0c\u7cfb\u7edf\u6027\u68c0\u7d22\u6587\u732e\u3001\u6784\u5efa\u77e5\u8bc6\u5e93\u3001\u751f\u6210\u7efc\u8ff0"
+        }
+      },
+      {
+        "id": "horse",
+        "name": "horse",
+        "workspace": "/root/.openclaw/workspace-horse",
+        "agentDir": "/root/.openclaw/agents/horse/agent",
+        "identity": {
+          "name": "\u767d\u9f99\u9a6c",
+          "theme": "\u6570\u636e\u5de5\u7a0b\u4e0e\u6d41\u7a0b\u81ea\u52a8\u5316\uff0c\u81ea\u52a8\u5316 workflow\u3001\u7ba1\u7406\u8ba1\u7b97\u8d44\u6e90\u3001\u5904\u7406\u6742\u4e8b"
+        }
+      },
+      {
+        "id": "coordinator",
+        "name": "coordinator",
+        "workspace": "/root/.openclaw/workspace-coordinator",
+        "agentDir": "/root/.openclaw/agents/coordinator/agent",
+        "identity": {
+          "name": "\u5b66\u672f\u8ba8\u8bba\u7a7a\u95f4",
+          "theme": "\u79d1\u7814\u56e2\u961f\u5b66\u672f\u8ba8\u8bba\u7a7a\u95f4\uff0c\u8d1f\u8d23\u4efb\u52a1\u5206\u53d1\u3001\u534f\u8c03\u548c\u6c47\u603b"
+        },
+        "subagents": {
+          "allowAgents": ["sanzang", "wukong", "wuneng", "wujing", "horse"]
+        }
+      }
+    ]
+  },
+  "tools": {
+    "profile": "coding",
+    "sessions": {
+      "visibility": "all"
+    },
+    "agentToAgent": {
+      "enabled": true,
+      "allow": ["sanzang", "wukong", "wuneng", "wujing", "horse", "coordinator"]
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "sanzang",
+      "match": { "channel": "feishu", "accountId": "sanzang" }
+    },
+    {
+      "agentId": "wujing",
+      "match": { "channel": "feishu", "accountId": "wujing" }
+    },
+    {
+      "agentId": "wukong",
+      "match": { "channel": "feishu", "accountId": "wukong" }
+    },
+    {
+      "agentId": "wuneng",
+      "match": { "channel": "feishu", "accountId": "wuneng" }
+    },
+    {
+      "agentId": "horse",
+      "match": { "channel": "feishu", "accountId": "horse" }
+    }
+  ],
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer",
+    "agentToAgent": {
+      "maxPingPongTurns": 25
+    }
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": {
+          "enabled": true
+        },
+        "bootstrap-extra-files": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "session-memory": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "domain": "feishu",
+      "groupPolicy": "open",
+      "connectionMode": "websocket",
+      "accounts": {
+        "sanzang": {
+          "appId": "cli_a920155adfb9dcd6",
+          "appSecret": "DZjoMMikLHqwZNGWiAtSffYRINLrBXfF",
+          "botName": "唐僧"
+        },
+        "wukong": {
+          "appId": "cli_a927af4f88785cb2",
+          "appSecret": "4WBgwadVYsxSg8IfIqLHhcun41hLhmkM",
+          "botName": "孙悟空"
+        },
+        "wuneng": {
+          "appId": "cli_a93959722f385bc2",
+          "appSecret": "qXATukFMJVr2YtlEturwQGF8UrGwGsyb",
+          "botName": "猪八戒"
+        },
+        "wujing": {
+          "appId": "cli_a923140ffe785bd1",
+          "appSecret": "JUtCbbn6YAz6m81BxOGCJbm8cTk6wNt3",
+          "botName": "沙僧"
+        },
+        "horse": {
+          "appId": "cli_a93959ff4cb8dcc2",
+          "appSecret": "EHdUlhnBdffS1pBAy3PnvfRSYiGOSkbC",
+          "botName": "白龙马"
+        },
+        "default": {
+          "dmPolicy": "pairing"
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "142c139e22fba4a4ba87a736913a5168284b1fd0b72fe86d"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "load": {
+      "paths": [
+        "/usr/lib/node_modules/openclaw/extensions/feishu"
+      ]
+    },
+    "entries": {
+      "feishu": {
+        "enabled": true
+      }
+    }
+  }
+}

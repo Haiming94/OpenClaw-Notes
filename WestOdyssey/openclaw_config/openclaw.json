@@ -1,0 +1,366 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.7",
+    "lastTouchedAt": "2026-03-13T00:00:00.000Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-12T06:29:42.712Z",
+    "lastRunVersion": "2026.3.7",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "zai:default": {
+        "provider": "zai",
+        "mode": "api_key"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "custom-127-0-0-1-58002": {
+        "baseUrl": "http://127.0.0.1:58002/v1",
+        "apiKey": "sk",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3.5-local",
+            "name": "qwen3.5-local (Custom Provider)",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          }
+        ]
+      },
+      "custom-kspmas-ksyun": {
+        "baseUrl": "https://kspmas.ksyun.com/v1",
+        "apiKey": "8407460c-9a3d-4a32-bb0d-43e91a74304f",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "mco-4",
+            "name": "mco-4 (Custom Provider)",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          }
+        ]
+      },
+      "zai": {
+        "baseUrl": "https://open.bigmodel.cn/api/paas/v4",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "glm-5",
+            "name": "GLM-5",
+            "reasoning": true,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 204800,
+            "maxTokens": 131072
+          },
+          {
+            "id": "glm-4.7",
+            "name": "GLM-4.7",
+            "reasoning": true,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 204800,
+            "maxTokens": 131072
+          },
+          {
+            "id": "glm-4.7-flash",
+            "name": "GLM-4.7 Flash",
+            "reasoning": true,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 204800,
+            "maxTokens": 131072
+          },
+          {
+            "id": "glm-4.7-flashx",
+            "name": "GLM-4.7 FlashX",
+            "reasoning": true,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 204800,
+            "maxTokens": 131072
+          }
+        ]
+      },
+      "custom-kspmas-ksyun-com": {
+        "baseUrl": "https://kspmas.ksyun.com/v1",
+        "apiKey": "8407460c-9a3d-4a32-bb0d-43e91a74304f",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "qwen3-coder-480b-a35b-instruct",
+            "name": "qwen3-coder-480b-a35b-instruct (Custom Provider)",
+            "api": "openai-completions",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          },
+          {
+            "id": "glm-4.7",
+            "name": "glm-4.7 (Custom Provider)",
+            "reasoning": false,
+            "input": ["text"],
+            "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+            "contextWindow": 262144,
+            "maxTokens": 32768
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "custom-kspmas-ksyun-com/glm-4.7"
+      },
+      "imageModel": {
+        "primary": "zai/glm-4.6v-flash"
+      },
+      "models": {
+        "custom-127-0-0-1-58002/qwen3.5-local": {},
+        "custom-kspmas-ksyun/mco-4": {},
+        "zai/glm-5": { "alias": "GLM" },
+        "zai/glm-4.7-flashx": {},
+        "zai/glm-4.7-flash": {},
+        "zai/glm-4.6v-flash": {},
+        "custom-kspmas-ksyun-com/qwen3-coder-480b-a35b-instruct": {},
+        "custom-kspmas-ksyun-com/glm-4.7": {}
+      },
+      "workspace": "/root/.openclaw/workspace",
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      }
+    },
+    "list": [
+      {
+        "id": "sanzang",
+        "name": "\u5510\u50e7",
+        "workspace": "/root/.openclaw/workspace-sanzang",
+        "agentDir": "/root/.openclaw/agents/sanzang/agent",
+        "identity": {
+          "name": "\u5510\u50e7",
+          "theme": "\u79d1\u7814\u6218\u7565\u4e0e\u65b9\u5411\u89c4\u5212\uff0c\u5b9a\u4e49\u7814\u7a76\u95ee\u9898\u3001\u5236\u5b9a\u8ba1\u5212\u3001\u8ffd\u8e2a\u524d\u6cbf\u3001\u534f\u8c03\u4f18\u5148\u7ea7"
+        }
+      },
+      {
+        "id": "wukong",
+        "name": "\u5b59\u609f\u7a7a",
+        "workspace": "/root/.openclaw/workspace-wukong",
+        "agentDir": "/root/.openclaw/agents/wukong/agent",
+        "identity": {
+          "name": "\u5b59\u609f\u7a7a",
+          "theme": "\u7b97\u6cd5\u5f00\u53d1\u4e0e\u7f16\u7a0b\u5b9e\u73b0\uff0c\u7f16\u5199\u8c03\u8bd5\u4ee3\u7801\u3001\u6784\u5efa\u5b9e\u9a8c pipeline\u3001\u8bad\u7ec3\u6a21\u578b"
+        }
+      },
+      {
+        "id": "wuneng",
+        "name": "\u732a\u516b\u6212",
+        "workspace": "/root/.openclaw/workspace-wuneng",
+        "agentDir": "/root/.openclaw/agents/wuneng/agent",
+        "identity": {
+          "name": "\u732a\u516b\u6212",
+          "theme": "\u5b66\u672f\u5199\u4f5c\u4e0e\u9879\u76ee\u7533\u62a5\uff0c\u64b0\u5199\u8bba\u6587\u3001\u6da6\u8272\u8bed\u8a00\u3001\u64b0\u5199\u57fa\u91d1\u7533\u8bf7\u4e66"
+        }
+      },
+      {
+        "id": "wujing",
+        "name": "\u6c99\u50e7",
+        "workspace": "/root/.openclaw/workspace-wujing",
+        "agentDir": "/root/.openclaw/agents/wujing/agent",
+        "identity": {
+          "name": "\u6c99\u50e7",
+          "theme": "\u6587\u732e\u7ba1\u7406\u4e0e\u77e5\u8bc6\u6574\u5408\uff0c\u7cfb\u7edf\u6027\u68c0\u7d22\u6587\u732e\u3001\u6784\u5efa\u77e5\u8bc6\u5e93\u3001\u751f\u6210\u7efc\u8ff0"
+        }
+      },
+      {
+        "id": "horse",
+        "name": "\u767d\u9f99\u9a6c",
+        "workspace": "/root/.openclaw/workspace-horse",
+        "agentDir": "/root/.openclaw/agents/horse/agent",
+        "identity": {
+          "name": "\u767d\u9f99\u9a6c",
+          "theme": "\u6570\u636e\u5de5\u7a0b\u4e0e\u6d41\u7a0b\u81ea\u52a8\u5316\uff0c\u81ea\u52a8\u5316 workflow\u3001\u7ba1\u7406\u8ba1\u7b97\u8d44\u6e90\u3001\u5904\u7406\u6742\u4e8b"
+        }
+      },
+      {
+        "id": "coordinator",
+        "name": "\u5b66\u672f\u8ba8\u8bba\u7a7a\u95f4",
+        "workspace": "/root/.openclaw/workspace-coordinator",
+        "agentDir": "/root/.openclaw/agents/coordinator/agent",
+        "identity": {
+          "name": "\u5b66\u672f\u8ba8\u8bba\u7a7a\u95f4",
+          "theme": "\u79d1\u7814\u56e2\u961f\u5b66\u672f\u8ba8\u8bba\u7a7a\u95f4\uff0c\u8d1f\u8d23\u4efb\u52a1\u5206\u53d1\u3001\u534f\u8c03\u548c\u6c47\u603b"
+        },
+        "subagents": {
+          "allowAgents": ["sanzang", "wukong", "wuneng", "wujing", "horse"]
+        }
+      }
+    ]
+  },
+  "tools": {
+    "profile": "coding",
+    "sessions": {
+      "visibility": "all"
+    },
+    "agentToAgent": {
+      "enabled": true,
+      "allow": ["sanzang", "wukong", "wuneng", "wujing", "horse", "coordinator"]
+    }
+  },
+  "bindings": [
+    {
+      "agentId": "sanzang",
+      "match": { "channel": "feishu", "accountId": "sanzang" }
+    },
+    {
+      "agentId": "wujing",
+      "match": { "channel": "feishu", "accountId": "wujing" }
+    },
+    {
+      "agentId": "wukong",
+      "match": { "channel": "feishu", "accountId": "wukong" }
+    },
+    {
+      "agentId": "wuneng",
+      "match": { "channel": "feishu", "accountId": "wuneng" }
+    },
+    {
+      "agentId": "horse",
+      "match": { "channel": "feishu", "accountId": "horse" }
+    }
+  ],
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer",
+    "agentToAgent": {
+      "maxPingPongTurns": 5
+    }
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "boot-md": { "enabled": true },
+        "bootstrap-extra-files": { "enabled": true },
+        "command-logger": { "enabled": true },
+        "session-memory": { "enabled": true }
+      }
+    }
+  },
+  "channels": {
+    "feishu": {
+      "enabled": true,
+      "domain": "feishu",
+      "defaultAccount": "horse",
+      "accounts": {
+        "sanzang": {
+          "appId": "cli_a920155adfb9dcd6",
+          "appSecret": "DZjoMMikLHqwZNGWiAtSffYRINLrBXfF",
+          "botName": "唐僧"
+        },
+        "wukong": {
+          "appId": "cli_a927af4f88785cb2",
+          "appSecret": "4WBgwadVYsxSg8IfIqLHhcun41hLhmkM",
+          "botName": "孙悟空"
+        },
+        "wuneng": {
+          "appId": "cli_a93959722f385bc2",
+          "appSecret": "qXATukFMJVr2YtlEturwQGF8UrGwGsyb",
+          "botName": "猪八戒"
+        },
+        "wujing": {
+          "appId": "cli_a923140ffe785bd1",
+          "appSecret": "JUtCbbn6YAz6m81BxOGCJbm8cTk6wNt3",
+          "botName": "沙僧"
+        },
+        "horse": {
+          "appId": "cli_a93959ff4cb8dcc2",
+          "appSecret": "EHdUlhnBdffS1pBAy3PnvfRSYiGOSkbC",
+          "botName": "白龙马"
+        },
+        "default": {
+          "dmPolicy": "pairing"
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "a2a141dc4ff7e78813f0f45ad6af434728e0bd725b7a5e95"
+    },
+    "http": {
+      "endpoints": {
+        "chatCompletions": { "enabled": true },
+        "responses": { "enabled": true }
+      }
+    },
+    "controlUi": {
+      "enabled": true
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "skills": {
+    "entries": {
+      "goplaces": { "enabled": false },
+      "gh-issues": { "enabled": false },
+      "nano-banana-pro": { "enabled": false },
+      "notion": { "enabled": false },
+      "openai-image-gen": { "enabled": false },
+      "openai-whisper-api": { "enabled": false },
+      "sag": { "enabled": false }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "feishu": { "enabled": true }
+    },
+    "installs": {
+      "feishu": {
+        "source": "npm",
+        "spec": "@openclaw/feishu",
+        "installPath": "/root/.openclaw/extensions/feishu",
+        "version": "2026.3.7",
+        "resolvedName": "@openclaw/feishu",
+        "resolvedVersion": "2026.3.7",
+        "resolvedSpec": "@openclaw/feishu@2026.3.7",
+        "integrity": "sha512-CHPcL+WHYKYR2HJKRYsRtlXx/wbQRy5axltjjH9qXkR8ghxygDmOHZREjxyFEbjFJ3wnIuvgjLE7JYTg3nPpDA==",
+        "shasum": "c4b31dbe2ff0bc7034334873482ad18ac60a0767",
+        "resolvedAt": "2026-03-09T00:15:22.480Z",
+        "installedAt": "2026-03-09T00:15:25.010Z"
+      }
+    }
+  }
+}
