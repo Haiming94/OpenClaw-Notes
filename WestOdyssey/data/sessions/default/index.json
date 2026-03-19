@@ -1,0 +1,87 @@
+{
+  "active_sessions": {
+    "sanzang": "b01e51c62ac7",
+    "wukong": "3a440abe5369",
+    "wuneng": "d0f47e3bea52",
+    "wujing": "b61c754c66ed",
+    "horse": "5fec7ea267e8",
+    "coordinator": "3b0983bf0b8e"
+  },
+  "sessions": {
+    "sanzang": {
+      "100ae825d74f": {
+        "session_id": "100ae825d74f",
+        "session_key": "agent:sanzang:main:webchat-user:default:5597678951b6",
+        "agent_id": "sanzang",
+        "title": "新会话 1",
+        "created_at": 1773390345.2707334,
+        "updated_at": 1773390345.2707334,
+        "message_count": 0
+      },
+      "b01e51c62ac7": {
+        "session_id": "b01e51c62ac7",
+        "session_key": "agent:sanzang:main:webchat-user:default:4d6075877485",
+        "agent_id": "sanzang",
+        "title": "新会话 2",
+        "created_at": 1773404006.053596,
+        "updated_at": 1773404006.0535963,
+        "message_count": 0
+      }
+    },
+    "wukong": {
+      "3a440abe5369": {
+        "session_id": "3a440abe5369",
+        "session_key": "agent:wukong:main:webchat-user:default:aa9c630842dc",
+        "agent_id": "wukong",
+        "title": "新会话 1",
+        "created_at": 1773390345.272217,
+        "updated_at": 1773390345.2722173,
+        "message_count": 0
+      }
+    },
+    "wuneng": {
+      "d0f47e3bea52": {
+        "session_id": "d0f47e3bea52",
+        "session_key": "agent:wuneng:main:webchat-user:default:b7ca8140eabf",
+        "agent_id": "wuneng",
+        "title": "新会话 1",
+        "created_at": 1773390345.2762885,
+        "updated_at": 1773390345.2762887,
+        "message_count": 0
+      }
+    },
+    "wujing": {
+      "b61c754c66ed": {
+        "session_id": "b61c754c66ed",
+        "session_key": "agent:wujing:main:webchat-user:default:e073c7bba13c",
+        "agent_id": "wujing",
+        "title": "新会话 1",
+        "created_at": 1773390345.278115,
+        "updated_at": 1773390345.278115,
+        "message_count": 0
+      }
+    },
+    "horse": {
+      "5fec7ea267e8": {
+        "session_id": "5fec7ea267e8",
+        "session_key": "agent:horse:main:webchat-user:default:0e33bd380a81",
+        "agent_id": "horse",
+        "title": "新会话 1",
+        "created_at": 1773390345.279288,
+        "updated_at": 1773390345.2792883,
+        "message_count": 0
+      }
+    },
+    "coordinator": {
+      "3b0983bf0b8e": {
+        "session_id": "3b0983bf0b8e",
+        "session_key": "agent:coordinator:main:webchat-user:default:19439d957619",
+        "agent_id": "coordinator",
+        "title": "nihao",
+        "created_at": 1773390345.2807262,
+        "updated_at": 1773390368.5409892,
+        "message_count": 2
+      }
+    }
+  }
+}
