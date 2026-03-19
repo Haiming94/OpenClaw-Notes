@@ -7,7 +7,7 @@
 
 本项目构建了一个面向 AI/ML 研究人员的**多智能体科研协作系统**，集成 5 个专业智能体，覆盖从文献调研到论文审稿的完整科研工作流。
 
-![](./images/poster.jpg)
+![](./images/poster2.jpg)
 
 ### 核心特性
 
@@ -57,25 +57,22 @@ dev_a/
 │   └── openclaw.json         # OpenClaw 5 Agent 配置
 ├── agents/
 │   ├── base.py               # Agent 基类 (API 调用封装)
-│   ├── literature.py         # 📚 文献调研员 system prompt
-│   ├── data.py               # 📊 数据工程师 system prompt
-│   ├── experiment.py         # 🧪 实验科学家 system prompt
-│   ├── writer.py             # ✍️ 学术写手 system prompt
-│   └── reviewer.py           # 🔍 审稿专家 system prompt
+│   ├── sanzang.py            # 📚 唐僧 system prompt
+│   ├── horse.py              # 📊 白龙马 system prompt
+│   ├── wukong.py             # 🧪 孙悟空 system prompt
+│   ├── wuneng.py             # ✍️ 猪八戒 system prompt
+│   └── wujing.py             # 🔍 沙僧 system prompt
 ├── core/
 │   ├── config.py             # 项目配置管理
 │   ├── session_manager.py    # 会话管理 (创建/切换/持久化)
 │   ├── message_router.py     # @mention 解析与路由
 │   └── stream_handler.py     # SSE 流式响应解析
 ├── ui/
-│   ├── app.py                # Streamlit 主入口
-│   ├── components/
-│   │   ├── header.py         # 顶部导航栏
-│   │   ├── sidebar.py        # 侧边栏 (Agent选择/会话管理)
-│   │   ├── chat_area.py      # 聊天区域 (消息/流式输出)
-│   │   └── agent_cards.py    # Agent 卡片展示
-│   └── styles/
-│       └── main.css          # 自定义样式
+│   ├── index.html            # 主页
+│   ├── dist/
+│   ├── node_modules/
+│   ├── public/
+│   └── src/
 └── tests/
     ├── test_agent_base.py
     ├── test_message_router.py
@@ -119,7 +116,7 @@ vim ~/.openclaw/openclaw.json
 确保：
 - `gateway.http.chatCompletions.enabled: true`
 - `gateway.auth.token` 已设置
-- 5 个 agent (literature, data, experiment, writer, reviewer) 已配置
+- 5 个 agent (唐僧、孙悟空、猪八戒、沙僧、白龙马) 已配置
 
 ### 4. 启动
 
@@ -158,10 +155,10 @@ openclaw gateway start
 POST http://gateway:18789/v1/chat/completions
 Headers:
   Authorization: Bearer <token>
-  X-OpenClaw-Agent-Id: literature      # 路由到指定 Agent
+  X-OpenClaw-Agent-Id: wukong          # 路由到指定 Agent
   X-OpenClaw-Session-Key: agent:...    # 会话隔离
   X-OpenClaw-Message-Channel: webchat  # 标识来源
 Body:
-  { "model": "openclaw/literature", "messages": [...], "stream": true }
+  { "model": "openclaw/wukong", "messages": [...], "stream": true }
 ```
 
