@@ -13,26 +13,11 @@
     "mode": "merge",
     "providers": {
       "custom-yun-com": {
-        "baseUrl": "http://kspmas.ksyun.com/v1",
-        "apiKey": "8407460c-9a3d-4a32-bb0d-43e91a74304f",
+        "baseUrl": "",
+        "apiKey": "",
         "api": "openai-completions",
         "models": [
-          {
-            "id": "mco-4",
-            "name": "mco-4 (Custom Provider)",
-            "reasoning": false,
-            "input": [
-              "text"
-            ],
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            },
-            "contextWindow": 262144,
-            "maxTokens": 32768
-          }
+          {...}
         ]
       }
     }
@@ -40,10 +25,10 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "custom-yun-com/mco-4"
+        "primary": "xxx/xxx"
       },
       "models": {
-        "custom-yun-com/mco-4": {}
+        "xxx/xxx": {}
       },
       "workspace": "/root/.openclaw/workspace",
       "compaction": {
@@ -236,7 +221,7 @@
     "bind": "loopback",
     "auth": {
       "mode": "token",
-      "token": "142c139e22fba4a4ba87a736913a5168284b1fd0b72fe86d"
+      "token": "142xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
     },
     "tailscale": {
       "mode": "off",
