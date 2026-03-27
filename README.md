@@ -12,6 +12,7 @@ This repository aims to document useful knowledge, share lessons learned, and pr
 
 ## 消息
 
+- 2026-03-20: 我们在 WestOdyssey 系统上测试了 minimax m2.7 模型，并和 AI科技评论 一起撰写了[评测文章](https://mp.weixin.qq.com/s/y-DGxxSKBF7UupLPyDKWcg)，欢迎关注！
 - 2026-03-19: 开源 [WestOdyssey](https://github.com/Haiming94/WestOdyssey) 项目。
 - 2026-03-14: 基于 OpenClaw 开发的 `WestOdyssey:一个面向科研攻关的智能协作系统` 项目在北京智源研究院组织的 `智源虾客行 OpenClaw落地实战派` 活动中获得第一名！
 
@@ -19,11 +20,11 @@ This repository aims to document useful knowledge, share lessons learned, and pr
 
 ## TODO list
 
-- [x] 安装指南
-- [x] skills 介绍
-- [x] multi-agent 配置介绍
+- [x] [安装指南](./Notes/1.install.md)
+- [x] [skills 介绍](./Notes/2.skills.md)
+- [x] [multi-agent 配置介绍](./Notes/3.multi-agent_setting.md)
 - [ ] 记忆管理
-- [ ] 使用技巧
+- [ ] [使用技巧](./Notes/sum_how_to_use.md)
 - [ ] 养虾指南
 
 - **WestOdyssey**
