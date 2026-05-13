@@ -28,6 +28,7 @@ This repository aims to document useful knowledge, share lessons learned, and pr
 - [x] [安装指南：OpenClaw + 飞书机器人](./Notes/1.install.md)
 - [x] [skills 介绍](./Notes/2.skills.md)
 - [x] [multi-agent 配置介绍](./Notes/3.multi-agent_setting.md)
+- [x] [SearXNG 搜索引擎](./Notes/5.SearXNG.md)
 - [ ] 记忆管理
 - [ ] 养虾指南
 
